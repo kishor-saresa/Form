@@ -12,28 +12,66 @@
     <legend>
         <h2>Form</h2>
     </legend>
+    <!-- form Start -->
     <form id="form">
-     <input type="text" id="Name" name="Name" placeholder="Name">Name<br><br>
-     <input type="email" id="Email" name="Email" placeholder="Email">Email<br><br>
-     <input type="phone number" id="Phone number" name="Phone number" placeholder="Phone number">Phone number<br><br>
-     <input type="date" id="Birthdate" name="Birthdate" placeholder="Birthdate">Birthdate<br><br>
-     <input type="time" id="Appointment time " name="Appointment time " placeholder="Appointment time ">Appointment time<br><br>
-     <input type="dropdown" id="Favorite color" name="Favorite color" placeholder="Favorite color">Favorite color<br><br>
-     <input type="radio" id="Payment method" name="Payment method" placeholder="Payment method">Payment method<br><br>
-     <input type="range" id="Age" name="Age " placeholder="Age ">Agebr><br>
-     <input type="checkbox" id="Checkbox options" name="Checkbox options" placeholder="Checkbox options"><br><br>
+     <label for="name"> Name</label><br><br>
+     <input type="text" id="Name" name="Name" placeholder="Name"><br><br>
+     <label for="name"> Email</label><br><br>
+     <input type="email" id="Email" name="Email" placeholder="Email" required><br><br>
+     <label for="phone number"> Phone number</label><br><br>
+     <input type="tel" id="Phone number" name="Phone number" placeholder="123@-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" Restricts><br><br>
+     <label for="name">Birthdate </label><br><br>
+     <input type="date" id="Birthdate" name="Birthdate" placeholder="Birthdate" ><br><br>
+     <label for="name">Appointment time</label><br><br>
+     <input type="time" id="Appointment time " name="Appointment time " placeholder="Appointment time "><br><br>
+     <label for="favorite color"> Choose Favorite color </label><br><br>
+        <select name="Favorite color" id="Favorite color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+        </select>
+      <br><br>
+      <!-- Radio Buttons -->
+     <label for="name">Payment method</label><br><br>
+     <input type="radio" id="debit card" name="Payment method">
+     <label for="debit card">Debit Card</label><br><br>
+     <input type="radio" id="credit card" name="Payment method">
+     <label for="credit card">Credit Card</label><br><br>
+     <input type="radio" id="net banking" name="Payment method">
+     <label for="net banking">Net Banking</label><br><br>
+     <!-- Radio Buttons End -->
+
+     <label for="name">Age range (18 to 40)</label><br><br>
+     <input type="range" id="Age" name="Age " placeholder="Age" min="18" max="40" ><br><br>
+     <!-- Checkbox -->
+     <label for="name">Checkbox options </label><br><br>
+     <input type="checkbox" id="vehicle" name="vehicle">
+     <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br><br>
+    <!-- Checkbox End -->
+
+     <label for="name"> Upload photo</label><br><br>
      <input type="file" id="Upload photo" name="Upload photo" placeholder="Upload photo"><br><br>
+     <!-- Buttons -->
+
      <input type="button" value="Submit" id="btn" onclick="Submit()">
-     <input type="button" value="Reset" id="btn">
+     <input type="button" value="Reset" id="btn"onclick="Reset()">
     </form>
   </fieldset>
+  <!-- Form End -->
+
   <br>
+  <!-- Data From Local Storage -->
   <div id="msg"></div>
   <fieldset>
     <legend>
         <h2>Data From Local Storage</h2>
     </legend>
 </fieldset>
+<!-- Data From Local Storage End -->
 </body>
 <script src="main.js"></script>
 </html>
