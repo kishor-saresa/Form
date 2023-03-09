@@ -1,7 +1,7 @@
 
 function Submit(){
-    alert("This is submit function")
+    alert("Submited Successfully")
 }
 function Reset(){
-    alert("this is reset function")
+    alert("Reset Successfully")
 }
