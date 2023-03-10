@@ -1,14 +1,17 @@
 //  Crud operations
+var row=null;
 
-function Submit(){
+function SubmitForm(){
   var dataEntered = retrieveData();
   var readData = readingDataFromLocalStorage(dataEntered);
-  
-  
+  if(row==null) { 
     insert(readData);
-    msg.innerHTML="data inserted"; 
+    msg.innerHTML="Data Inserted";
+} 
+ else{
     update();
-    msg.innerHTML="data updated";
+    msg.innerHTML="Data Updated";
+}
 }
 // retrive data in form
 function retrieveData(){
@@ -45,20 +48,20 @@ function  insert(readData)
 
     // Edit 
     function edit(td){
-         row= td.parentElement.prentElement;
+        row= td.parentElement.prentElement;
         document.getElementById("Name").value=row.cells[0].innerHTML;
         document.getElementById("Email").value=row.cells[1].innerHTML;
     }
-    // Updaet  
+    // Update  
     function update(){
         row.cells[0].innerHTML=document.getElementById("Name").value;
         row.cells[1].innerHTML=document.getElementById("Email").value;
-         row =null;
+        row = null;
 
     } 
     // Delete
     function remove(td){
-        row= td.parentElement.parentElement;
+        row = td.parentElement.parentElement;
         document.getElementById("table").deleteRow(row.rowIndex);
     }                         
 }

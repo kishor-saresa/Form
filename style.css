@@ -1,0 +1,28 @@
+body{
+font-family: 'Times New Roman', Times, serif;
+background-color: rgb(30, 30, 73);
+color: white;
+box-shadow: 0 0 8px;
+}
+table{
+ border-color: white;
+}
+td{
+padding: 8px 16px;
+}
+.col{
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(168,246,10);
+}
+tr{
+  background-color: rgb(165,233,255);
+  color: black;
+  text-align: center;
+}
+input{
+  font-size: 16px;
+}
+#msg{
+  color: red;
+}
